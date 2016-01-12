@@ -1,0 +1,52 @@
+.menu-main {
+  float: left;
+  margin-right: -100%;
+  width: 100%;
+  position: relative;
+  z-index: 30;
+  display: block;
+
+  .menu-list {
+    pointer-events: none;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0s $easing ($speed * 5);
+  }
+
+  .item--link {
+    float: left;
+    clear: left;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: ($gutter * 1) $gutter;
+  }
+
+  .menu-list--item {
+    opacity: 0;
+    transition: opacity $speed $easing 0s;
+  }
+}
+
+[data-mobile-menu="expanded"] {
+  .menu-main--menu-list {
+    pointer-events: auto;
+    max-height: 800px;
+    transition: max-height 0s $easing 0s;
+  }
+
+  .menu-list--item {
+    opacity: 1;
+
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        transition: opacity $speed $easing (.1s * ($i + 1));
+      }
+    }
+  }
+}

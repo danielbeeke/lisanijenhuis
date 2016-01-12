@@ -1,0 +1,38 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: Lisa Nijenhuis
+slogan: "Blogs over mijn reizen & eten.<br>En foto's van schilderijen."
+author:
+  name: Daniel Beeke
+  email: daniel.beeke@gmail.com
+
+
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: date
+paginate: 4
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: redcarpet
+
+collections:
+  blogs:
+    output: true
+    permalink: /blogs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: page

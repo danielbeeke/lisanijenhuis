@@ -1,0 +1,56 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: $font-body;
+  padding: 0;
+}
+
+h1, h2, h4, h5, h6 {
+  font-family: $font-header;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-family: $font-body;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+#__bs_notify__ {
+  display: none !important;
+}
+
+*:focus {
+  outline: none;
+}
+*::-moz-focus-inner {
+  border: none;
+}

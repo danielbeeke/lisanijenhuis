@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+<h3 class="site--slogan">{{ site.slogan }}</h3>
+
+<img src="/img/lisa.jpg" class="site--avatar">
+
+{% for blog in site.blogs %}
+    {% include blogs/teaser.html %}
+{% endfor %}

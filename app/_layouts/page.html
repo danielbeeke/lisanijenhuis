@@ -1,0 +1,18 @@
+---
+layout: html
+---
+
+<header class="page--header">
+    <h2 class="site--name"><a href="/" class="site--name--inner">{{ site.name }}</a></h2>
+    {% include html/menu.html %}
+</header>
+
+<h1 class="page--title inside-header">{{ page.title }}</h1>
+
+<main class="page--content">
+    {% if page.title %}<h1 class="page--title inside-content" id="page--title-inside-content">{{ page.title }}</h1>{% endif %}
+
+    {% if page.header %}<img src="/img/{{ page.header }}" class="page-header-image">{% endif %}
+
+    {{ content }}
+</main>

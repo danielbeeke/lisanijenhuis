@@ -1,0 +1,25 @@
+.overlay-background {
+  position: fixed;
+  top: $gutter * 3;
+  right: $gutter * 2;
+  content: '';
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  transition: width ($speed) $easing ($speed * 1), height ($speed) $easing ($speed * 1), background-color ($speed * 1) $easing ($speed * 3), z-index 0s ($speed * 4);
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(50%, -50%);
+}
+
+[data-mobile-menu="expanded"] {
+  .overlay-background {
+    transition: width ($speed * 1) $easing ($speed * 1), height ($speed * 1) $easing ($speed * 1), background-color ($speed * 1) $easing ($speed * 1), z-index 0s 0s;
+    background-color: $color-primary;
+    width: 300vmax;
+    height: 300vmax;
+    z-index: 40;
+    transform: translate(50%, -50%);
+  }
+}

@@ -1,0 +1,52 @@
+.mobile-toggle {
+  float: right;
+  position: relative;
+  padding: $gutter;
+  z-index: 120;
+  background-color: $color-primary;
+  transition: background-color $speed $easing;
+  margin-left: -100%;
+
+  .mobile-toggle--bar {
+    width: 24px;
+    height: 2px;
+    opacity: 1;
+    background: white;
+    transform: translate(0, 0) rotate(0);
+    transition: opacity $speed $easing, height $speed $easing, width $speed $easing, transform $speed $easing, background-color $speed $easing;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &:hover {
+    background-color: darken($color-primary, 10);
+  }
+}
+
+[data-mobile-menu="expanded"] {
+  .mobile-toggle {
+    transition: background-color $speed $easing;
+    background-color: white;
+  }
+
+  .mobile-toggle--bar {
+    background-color: $color-primary;
+  }
+
+  .mobile-toggle--bar:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+  }
+
+  .mobile-toggle--bar:nth-child(2) {
+    opacity: 0;
+    width: 1px;
+    transform: translateX(12px);
+  }
+
+  .mobile-toggle--bar:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}

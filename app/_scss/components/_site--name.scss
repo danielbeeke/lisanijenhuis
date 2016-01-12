@@ -1,0 +1,36 @@
+.site--name {
+  color: white;
+  width: calc(100% - 50px);
+  height: 50px;
+  padding: 0 ($gutter * 4) 0 $gutter;
+  white-space: nowrap;
+  margin: 0;
+  position: absolute;
+  right: 50px;
+  transition: transform $speed $easing 0s, z-index 0s $speed;
+  overflow: hidden;
+  background-color: $color-primary;
+  z-index: 40;
+}
+
+.site--name--inner {
+  transition: transform $speed $easing 0s;
+  margin: -7px 0;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 50px);
+  color: white;
+  text-decoration: none;
+}
+
+[data-mobile-header="collapsed"] {
+  .site--name {
+    z-index: 8;
+    transition: transform $speed $easing 0s, z-index 0s 0s;
+    transform: translateX(100vw);
+  }
+
+  .site--name--inner {
+    transform: translateX(-100vw);
+  }
+}
