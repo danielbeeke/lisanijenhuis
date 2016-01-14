@@ -3,31 +3,46 @@
     font-family: 'lane', sans-serif;
     font-size: 24px;
     position: fixed;
-    z-index: 9;
     width: 100%;
     top: 0;
     margin: 0;
     text-align: left;
     line-height: 50px;
-    padding: $gutter;
+    padding: $gutter ($gutter * 2);
     padding-right: 60px;
     right: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    text-overflow: ellipsis;
     background-color: white;
     transition: opacity .1s $easing;
     color: $color-secondary;
     opacity: 1;
-    box-shadow: 0 0 10px rgba(black, .5);
+    box-shadow: 0 0 20px rgba(black, .2);
+  }
+
+  .page--title--inner.inside-header {
+    opacity: 0;
+    float: left;
+    width: 100%;
+    transition: opacity $speed $easing;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    z-index: 62;
   }
 
   &.inside-content {
-    padding: 130px ($gutter * 2) 60px;
-    background: linear-gradient(to bottom, white 90%, rgba(white, 0) 100%);
+    padding: 140px ($gutter * 2) 60px;
+    background-color: white;
     margin: 0;
     position: relative;
+    float: left;
     z-index: 9;
+    color: $color-secondary;
+  }
+}
+
+[data-scroll-header="below-page-title"] {
+  .page--title--inner.inside-header {
+    opacity: 1;
   }
 }

@@ -1,0 +1,43 @@
+.blog.teaser {
+  position: relative;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 60px;
+  float: left;
+  clear: both;
+  background-color: white;
+  transition: background-color $speed $easing;
+
+  .blog-teaser--image {
+    width: 70px;
+    position: absolute;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+  }
+
+  .blog-date {
+    font-size: 16px;
+  }
+
+  .blog-date,
+  .blog--title {
+    margin: 0;
+    margin-left: 90px;
+    color: $color-secondary;
+    padding-top: 10px;
+    padding-right: 20px;
+    float: left;
+  }
+
+  .blog--title {
+    padding-bottom: 10px;
+    font-family: $font-header;
+    font-size: 42px;
+  }
+
+  &:hover {
+    //background-color: $color-gray;
+  }
+}

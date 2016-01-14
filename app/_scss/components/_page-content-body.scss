@@ -1,0 +1,31 @@
+.page-content-body {
+  padding: ($gutter * 2) 0;
+  font-family: 'open sans', sans-serif;
+
+  p {
+    line-height: 32px;
+    margin: 0 ($gutter * 2);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-left: $gutter * 2;
+    margin-right: $gutter * 2;
+    color: $color-secondary;
+    font-family: $font-body;
+  }
+
+  h3 {
+    font-size: 30px;
+
+  }
+
+  p + p {
+    margin-top: 50px;
+  }
+}
+
+.has--no-page-title {
+  .page-content-body {
+    padding-top: 90px;
+  }
+}

@@ -21,16 +21,35 @@
   .item--link {
     float: left;
     clear: left;
+    width: 100%;
+    text-align: left;
     text-decoration: none;
     color: white;
     font-size: 24px;
-    padding: ($gutter * 1) $gutter;
+    padding: 10px ($gutter * 2);
+    transition: background-color $speed $easing, color $speed $easing;
+
+    &:hover {
+      color: $color-secondary;
+      background-color: white;
+    }
   }
 
   .menu-list--item {
     opacity: 0;
     transition: opacity $speed $easing 0s;
+    float: left;
+    clear: both;
+    width: 100%;
+
+    &:not(:last-child) .item--link {
+      border-bottom: 1px solid white;
+    }
   }
+}
+
+[data-mobile-menu="collapsed"] .menu-main {
+  cursor: pointer;
 }
 
 [data-mobile-menu="expanded"] {

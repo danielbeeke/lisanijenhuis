@@ -1,3 +1,5 @@
 <a href="{{ blog.url }}" class="blog teaser">
+    <div class="blog-teaser--image" style="background-image: url('/img/{{ blog.header }}');"></div>
+    <span class="blog-date">{{ blog.date | date_to_long_string }}</span>
     <h3 class="blog--title">{{ blog.title }}</h3>
 </a>
