@@ -5,22 +5,22 @@
     position: fixed;
     width: 100%;
     top: 0;
-    margin: 0;
     text-align: left;
     line-height: 50px;
-    padding: $gutter ($gutter * 2);
-    padding-right: 60px;
     right: 0;
+    margin: 0;
     background-color: white;
     transition: opacity .1s $easing;
     color: $color-secondary;
     opacity: 1;
-    box-shadow: 0 0 20px rgba(black, .2);
   }
 
   .page--title--inner.inside-header {
+    box-shadow: 0 0 20px rgba(black, .2);
+    max-width: 960px;
+    padding: 7px 60px 6px 26px;
+    margin: 0 auto;
     opacity: 0;
-    float: left;
     width: 100%;
     transition: opacity $speed $easing;
     white-space: nowrap;
@@ -34,6 +34,7 @@
     padding: 140px ($gutter * 2) 60px;
     background-color: white;
     margin: 0;
+    width: 100%;
     position: relative;
     float: left;
     z-index: 9;

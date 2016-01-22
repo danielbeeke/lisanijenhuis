@@ -62,7 +62,7 @@
   .menu-list--item {
     opacity: 1;
 
-    @for $i from 1 to 6 {
+    @for $i from 1 to 20 {
       &:nth-child(#{$i}) {
         transition: opacity $speed $easing (.1s * ($i + 1));
       }

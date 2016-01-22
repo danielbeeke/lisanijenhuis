@@ -3,8 +3,10 @@ layout: html
 ---
 
 <header class="page--header">
-    <h2 class="site--name"><a href="/" class="site--name--inner">{{ site.name }}</a></h2>
-    {% include html/menu.html %}
+    <div class="page--header-inner">
+        <h2 class="site--name"><a href="/" class="site--name--inner">{{ site.name }}</a></h2>
+        {% include html/menu.html %}
+    </div>
 </header>
 
 {% if page.title != '' %}<h1 class="page--title inside-header"><span class="page--title--inner inside-header">{{ page.title }}</span></h1>{% endif %}

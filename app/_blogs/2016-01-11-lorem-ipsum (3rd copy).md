@@ -1,5 +1,5 @@
 ---
-title: Est quis consequat aliquam
+title: Traveling is magic 2015
 header: wood.jpg
 ---
 

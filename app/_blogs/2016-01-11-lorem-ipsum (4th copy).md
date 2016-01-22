@@ -1,5 +1,5 @@
 ---
-title: Proin rhoncus efficitur eros, nec bibendum ipsum rhoncus nec.
+title: Traveling is magic, out & about.
 header: gans.jpg
 ---
 
