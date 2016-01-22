@@ -20,5 +20,12 @@
     width: 300vmax;
     height: 300vmax;
     z-index: 40;
+    transform: translate(50%, -50%);
+  }
+}
+
+@media screen and (min-width: $max-width) {
+  .overlay-background {
+    right: calc(50% - #{$max-width  / 2} + 22px);
   }
 }

@@ -9,10 +9,11 @@ layout: html
     </div>
 </header>
 
-{% if page.title != '' %}<h1 class="page--title inside-header"><span class="page--title--inner inside-header">{{ page.title }}</span></h1>{% endif %}
+{% if page.title != '' %}<h1 class="page--title inside-header"><span class="page--title--inner inside-header"><span class="page--title--inner-inner">{{ page.title }}</span></span></h1>{% endif %}
 
 <main class="page--content">
-    {% if page.title != '' %}<h1 class="page--title inside-content" id="page--title-inside-content">{{ page.title }}
+    {% if page.title != '' %}<h1 class="page--title inside-content" id="page--title-inside-content">
+    {{ page.title }}
 
 
     {% if page.date %}
@@ -20,9 +21,10 @@ layout: html
     {% endif %}
 
 </h1>{% endif %}
+</main>
 
-    {% if page.header %}<img src="/img/{{ page.header }}" class="page-header-image">{% endif %}
-
+    {% if page.header %}<div src="" class="page-header-image" style="background-image: url('/img/{{ page.header }}');"></div>{% endif %}
+<main class="page--content">
     <div class="page-content-body">
         {{ content }}
     </div>
