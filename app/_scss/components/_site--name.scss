@@ -34,3 +34,18 @@
     transform: translateX(-100vw);
   }
 }
+
+@media screen and (min-width: $max-width) {
+  $slowing-factor: 1.6;
+  .site--name {
+    transition: transform ($speed * $slowing-factor) $easing 0s, z-index 0s ($speed * $slowing-factor) !important;
+  }
+
+  .site--name--inner {
+    transition: transform ($speed * $slowing-factor) $easing 0s !important;
+  }
+
+  [data-mobile-header="collapsed"] .site--name {
+    transition: transform ($speed * $slowing-factor) $easing 0s, z-index 0s 0s !important;
+  }
+}

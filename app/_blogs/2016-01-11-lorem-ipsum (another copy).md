@@ -1,6 +1,6 @@
 ---
 title: Concience grows
-header: champignon.jpg
+image: champignon.jpg
 ---
 
 ###Ingredients

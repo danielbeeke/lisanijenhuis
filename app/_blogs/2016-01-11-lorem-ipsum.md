@@ -1,6 +1,6 @@
 ---
 title: Less luxary, less comfort?
-header: lamp.jpg
+image: lamp.jpg
 ---
 ###During our travels we started realizing all the ‘normal’ luxuries aren’t always so normal or even necessary. Today I would like to talk about our experiences and what we have learned on this topic (so far).
 

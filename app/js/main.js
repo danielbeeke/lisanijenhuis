@@ -57,6 +57,55 @@
             var scrollState = window.scrollY > bottomOfPageTitleInContent ? 'below-page-title' : 'above-page-title';
             document.body.setAttribute('data-scroll-header', scrollState);
         }
+
+        var scrollStatePager = window.scrollY > 900 ? 'show' : 'hide';
+        document.body.setAttribute('data-scroll-pager', scrollStatePager);
+
+    });
+
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    var items = [];
+
+    var paintingsList = document.querySelectorAll('.painting.teaser');
+    if (paintingsList.length) {
+        var paintings = Array.prototype.slice.call(paintingsList,0);
+
+        paintings.forEach(function (painting, i) {
+            items.push({
+                src: painting.src,
+                w: painting.dataset.width,
+                h: painting.dataset.height,
+                el: painting
+            });
+
+            painting.addEventListener("click", function(e) {
+                var options = {
+                    index: i,
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+
+                        return {
+                            x: rect.left,
+                            y: rect.top + pageYScroll,
+                            w: rect.width,
+                            h: rect.height
+                        };
+                    }
+                };
+
+                var gallery = new PhotoSwipe( pswpElement, false, items, options);
+
+                gallery.init();
+                e.preventDefault();
+            }, false);
+
+
         });
+
+    }
 
 })();

@@ -1,6 +1,6 @@
 ---
 title: Plant based drinks
-header: tom2.jpg
+image: tom2.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ex quam. Cras tincidunt enim faucibus, volutpat velit sed, faucibus nibh. Suspendisse scelerisque sagittis consectetur. Aliquam imperdiet quis ante ac iaculis. Praesent augue metus, ultricies sed diam quis, maximus gravida ligula. Quisque vulputate eget mauris sit amet pretium. Cras efficitur cursus laoreet.

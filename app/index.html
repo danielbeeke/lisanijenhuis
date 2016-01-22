@@ -7,8 +7,38 @@ title: ''
 
 <img src="/img/lisa.jpg" class="site--avatar">
 
-<h4 class="items-title">Blogs about traveling & food</h4>
+<div class="frontpage-block">
+    <h4 class="frontpage-block--items-title">Blogs about traveling & food</h4>
 
-{% for blog in site.blogs %}
-    {% include blogs/teaser.html %}
-{% endfor %}
+    <div class="frontpage-block--inner">
+        {% for blog in site.blogs | limit: 3 %}
+            {% include blogs/teaser.html %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="frontpage-block paintings">
+    <h4 class="frontpage-block--items-title">My paintings</h4>
+
+
+    <div class="frontpage-block--inner">
+        {% directory path: img/paintings %}
+            {% assign first_third = forloop.length | divided_by: 3 %}
+            {% assign next_third_start = forloop.length | divided_by: 3 | plus: 1 %}
+            {% assign next_third_end = forloop.length | divided_by: 3 | times: 2 %}
+            {% assign last_third_start = forloop.length | divided_by: 3 | times: 2 | plus: 1%}
+
+            {% if forloop.first or forloop.index == next_third_start or forloop.index == last_third_start %}
+            <div class="paintings-column">
+                {% endif %}
+
+                <img class="painting teaser" src="{{ file.url }}" data-width="{{ file.sizes[0] }}" data-height="{{ file.sizes[1] }}"></img>
+
+                {% if forloop.index == first_third or forloop.index == next_third_end or forloop.last %}
+            </div>
+            {% endif %}
+        {% enddirectory %}
+    </div>
+</div>
+
+{% include paintings/photoswipe.html %}

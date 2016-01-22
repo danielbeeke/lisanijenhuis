@@ -1,0 +1,131 @@
+.nav-reveal a svg {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-reveal {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .pager-inner-title {
+    position: absolute;
+    margin: 0;
+    color: white;
+    font-size: 34px;
+    top: 50%;
+    width: 220px;
+    transform: translateY(-50%);
+  }
+
+  .pager-inner-title span {
+    display: block;
+    padding-top: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .icon-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+
+    path {
+      fill: white;
+      transition: fill $speed;
+    }
+  }
+
+  .pager-inner-image {
+    width: 100px;
+    height: 160px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+  }
+
+  .pager-link {
+    position: absolute;
+    top: 50%;
+    display: block;
+    outline: none;
+    text-align: left;
+    z-index: 1000;
+    transform: translate(0, -50%);
+
+    overflow: hidden;
+    width: 44px;
+    height: 160px;
+    background-color: $color-primary;
+    transition: all 0.4s, background-color 0.4s;
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+    &:hover {
+      width: 400px;
+      background-color: darken($color-primary, 10);
+
+      .icon-wrap path {
+        fill: white;
+      }
+    }
+  }
+
+  .pager-inner {
+    position: absolute;
+    top: 0;
+    padding: 0 50px;
+    width: 400px;
+    height: 100%;
+  }
+}
+
+.nav-reveal .prev {
+  transform: translate(-60px, -50%);
+  left: 0;
+
+  .pager-inner-image {
+    right: 0;
+  }
+
+  .icon-wrap {
+    left: 8px;
+  }
+
+  .pager-inner {
+    left: 0;
+    padding-right: 130px;
+    text-align: right;
+  }
+}
+
+.nav-reveal .next {
+  transform: translate(60px, -50%);
+  right: 0;
+
+  .pager-inner-image {
+    left: 0;
+  }
+
+  .icon-wrap {
+    right: 8px;
+  }
+
+  .pager-inner {
+    right: 0;
+    padding-left: 130px;
+  }
+}
+
+[data-scroll-pager="show"] {
+  .nav-reveal .prev {
+    transform: translate(0, -50%);
+  }
+
+  .nav-reveal .next {
+    transform: translate(0, -50%);
+  }
+}

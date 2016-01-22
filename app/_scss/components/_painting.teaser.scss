@@ -1,0 +1,15 @@
+.painting.teaser {
+  position: relative;
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.paintings-column {
+  float: right;
+  width: calc(33.3333% - 20px);
+
+  &:not(:first-child) {
+    margin-right: 30px;
+  }
+}

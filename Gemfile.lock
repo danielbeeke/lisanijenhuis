@@ -1,7 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.4.0)
     colorator (0.1)
+    fastimage (1.8.1)
+      addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
     jekyll (3.0.1)
       colorator (~> 0.1)
@@ -37,6 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fastimage
   jekyll (~> 3)
   jekyll-paginate
   redcarpet
