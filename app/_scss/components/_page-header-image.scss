@@ -1,11 +1,11 @@
 .page-header-image {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   display: block;
   min-height: 200px;
-  float: left;
+  clear: both;
   background-size: cover;
   background-position: center center;
   padding-bottom: 40%;
-  margin-bottom: 60px;
+  max-width: 1500px;
 }

@@ -13,7 +13,7 @@
     height: 100px;
     max-width: $max-width;
     right: 50%;
-    transform: translateX(50%) translateX(1px);
+    transform: translateX(50%);
   }
 
   .page--title--inner.inside-header {
@@ -21,9 +21,7 @@
     box-shadow: 0 0 20px rgba(black, .2);
     padding: 7px 60px 6px 26px;
     margin: 0 auto;
-    opacity: 1;
     width: 100%;
-    transition: opacity $speed $easing;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -44,7 +42,9 @@
   }
 
   .page--title--inner-inner {
+    opacity: 0;
     position: relative;
+    transition: opacity $speed $easing;
     z-index: 5;
   }
 
@@ -61,7 +61,7 @@
 }
 
 [data-scroll-header="below-page-title"] {
-  .page--title--inner.inside-header {
+  .page--title--inner-inner {
     opacity: 1;
   }
 }
