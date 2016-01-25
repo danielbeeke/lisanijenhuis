@@ -285,7 +285,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'dist',
+          remote: 'origin',
           branch: 'gh-pages',
           commit: true,
           push: true
