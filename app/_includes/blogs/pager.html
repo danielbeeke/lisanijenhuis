@@ -1,0 +1,21 @@
+<nav class="nav-reveal">
+    {% if page.previous %}
+    <a class="prev pager-link" href="{{ page.previous.url }}">
+        <span class="icon-wrap"><svg width="64" height="64" viewBox="0 0 64 64"><path id="arrow-left-3" d="M44.797 17.28l0.003 29.44-25.6-14.72z" /></svg></span>
+        <div class="pager-inner">
+            <h3 class="pager-inner-title">{{ page.previous.title }} <span>{{ page.previous.date | date_to_long_string }}</span></h3>
+            <div class="pager-inner-image" style="background-image: url('/img/{{ page.previous.image }}');"></div>
+        </div>
+    </a>
+    {% endif %}
+
+    {% if page.next %}
+    <a class="next pager-link" href="{{ page.next.url }}">
+        <span class="icon-wrap"><svg width="64" height="64" viewBox="0 0 64 64"><path id="arrow-right-3" d="M19.203 17.28l-0.003 29.44 25.6-14.72z" /></svg></span>
+        <div class="pager-inner">
+            <h3 class="pager-inner-title">{{ page.next.title }} <span>{{ page.next.date | date_to_long_string }}</span></h3>
+            <div class="pager-inner-image" style="background-image: url('/img/{{ page.next.image }}');"></div>
+        </div>
+    </a>
+    {% endif %}
+</nav>

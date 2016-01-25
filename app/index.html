@@ -5,13 +5,11 @@ title: ''
 
 <h3 class="site--slogan">{{ site.slogan }}</h3>
 
-<img src="/img/lisa.jpg" class="site--avatar">
-
 <div class="frontpage-block">
     <h4 class="frontpage-block--items-title">Blogs about traveling & food</h4>
 
     <div class="frontpage-block--inner">
-        {% for blog in site.blogs | limit: 3 %}
+        {% for blog in site.blogs %}
             {% include blogs/teaser.html %}
         {% endfor %}
     </div>

@@ -39,12 +39,8 @@
     opacity: 0;
     transition: opacity $speed $easing 0s;
     float: left;
-    clear: both;
     width: 100%;
-
-    &:not(:last-child) .item--link {
-      border-bottom: 1px solid white;
-    }
+    border-bottom: 1px solid white;
   }
 }
 
@@ -66,6 +62,16 @@
       &:nth-child(#{$i}) {
         transition: opacity $speed $easing (.1s * ($i + 1));
       }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu-main .menu-list--item {
+    width: calc(50% - 20px);
+
+    &:nth-of-type(odd) {
+      margin-right: 40px;
     }
   }
 }
