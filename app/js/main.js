@@ -3,6 +3,8 @@
     var overlayBackground = document.getElementById('overlay-background');
     var pageTitleInContent = document.getElementById('page--title-inside-content');
     var menuMain = document.getElementById('menu-main');
+    var pageContentBody = document.querySelectorAll('.page-content-body')[0];
+    var pageContentBodyOffet = pageContentBody.offsetTop
 
     var bottomOfPageTitleInContent;
     if (pageTitleInContent !== null) {
@@ -58,7 +60,8 @@
             document.body.setAttribute('data-scroll-header', scrollState);
         }
 
-        var scrollStatePager = window.scrollY > 900 ? 'show' : 'hide';
+
+        var scrollStatePager = window.scrollY > pageContentBodyOffet ? 'show' : 'hide';
         document.body.setAttribute('data-scroll-pager', scrollStatePager);
 
     });

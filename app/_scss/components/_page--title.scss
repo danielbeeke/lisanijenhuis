@@ -1,6 +1,5 @@
 .page--title {
   &.inside-header {
-    font-family: 'lane', sans-serif;
     font-size: 24px;
     position: fixed;
     width: 100%;
@@ -14,6 +13,10 @@
     max-width: $max-width;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (min-width: 500px) {
+      font-size: 36px;
+    }
   }
 
   .page--title--inner.inside-header {
@@ -46,6 +49,9 @@
     position: relative;
     transition: opacity $speed $easing;
     z-index: 5;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &.inside-content {

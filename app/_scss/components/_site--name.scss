@@ -11,6 +11,12 @@
   overflow: hidden;
   background-color: $color-primary;
   z-index: 40;
+  font-size: 40px;
+  line-height: 64px;
+
+  @media screen and (min-width: 700px) {
+    font-size: 50px;
+  }
 }
 
 .site--name--inner {
