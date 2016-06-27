@@ -100,7 +100,7 @@
                     }
                 };
 
-                var gallery = new PhotoSwipe( pswpElement, false, items, options);
+                var gallery = new window.PhotoSwipe( pswpElement, false, items, options);
 
                 gallery.init();
                 e.preventDefault();
