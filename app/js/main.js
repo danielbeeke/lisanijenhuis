@@ -4,17 +4,17 @@
     var pageTitleInContent = document.getElementById('page--title-inside-content');
     var menuMain = document.getElementById('menu-main');
     var pageContentBody = document.querySelectorAll('.page-content-body')[0];
-    var pageContentBodyOffet = pageContentBody.offsetTop
+    var pageContentBodyOffet = pageContentBody.offsetTop;
 
     var bottomOfPageTitleInContent;
     if (pageTitleInContent !== null) {
         bottomOfPageTitleInContent = pageTitleInContent.offsetTop + pageTitleInContent.clientHeight - 26;
     }
 
-    menuMain.addEventListener("click", function(e) {
+    menuMain.addEventListener('click', function(e) {
         var currentMenuState = document.body.getAttribute('data-mobile-menu');
 
-        if (currentMenuState == 'collapsed' && e.target == menuMain) {
+        if (currentMenuState === 'collapsed' && e.target === menuMain) {
             scrollTo(document.documentElement, 0, 600);
         }
     }, false);
@@ -26,21 +26,21 @@
 
         setTimeout(function() {
             element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop == to) return;
+            if (element.scrollTop === to) return;
             scrollTo(element, to, duration - 10);
         }, 10);
     }
 
-    mobileToggle.addEventListener("click", function(e) {
+    mobileToggle.addEventListener('click', function(e) {
         var currentMenuState = document.body.getAttribute('data-mobile-menu');
-        var newMenuState = currentMenuState == 'expanded' ? 'collapsed' : 'expanded';
+        var newMenuState = currentMenuState === 'expanded' ? 'collapsed' : 'expanded';
         document.body.setAttribute('data-mobile-menu', newMenuState);
 
-        if (newMenuState == 'expanded') {
+        if (newMenuState === 'expanded') {
             document.body.setAttribute('data-mobile-header', 'collapsed');
         }
-        else if (window.scrollY == 0) {
-            overlayBackground.addEventListener("transitionend", expandHeader)
+        else if (window.scrollY === 0) {
+            overlayBackground.addEventListener('transitionend', expandHeader);
         }
 
         e.preventDefault();
@@ -48,7 +48,7 @@
 
     function expandHeader(e) {
         document.body.setAttribute('data-mobile-header', 'expanded');
-        overlayBackground.removeEventListener("transitionend", expandHeader);
+        overlayBackground.removeEventListener('transitionend', expandHeader);
     }
 
     window.addEventListener('scroll', function (e) {
@@ -82,11 +82,11 @@
                 el: painting
             });
 
-            painting.addEventListener("click", function(e) {
+            painting.addEventListener('click', function(e) {
                 var options = {
                     index: i,
                     getThumbBoundsFn: function(index) {
-                        var thumbnail = items[index].el
+                        var thumbnail = items[index].el,
                             pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                             rect = thumbnail.getBoundingClientRect();
 
