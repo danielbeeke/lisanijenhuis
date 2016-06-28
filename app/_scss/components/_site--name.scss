@@ -29,7 +29,8 @@
   text-decoration: none;
 }
 
-[data-mobile-header="collapsed"] {
+[data-mobile-header="collapsed"],
+[data-mobile-menu="expanded"] {
   .site--name {
     z-index: 8;
     transition: transform $speed $easing 0s, z-index 0s 0s;
