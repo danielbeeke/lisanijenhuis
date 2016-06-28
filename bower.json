@@ -2,6 +2,7 @@
   "name": "lisa",
   "version": "0.0.0",
   "dependencies": {
-    "photoswipe": "~4.1.1"
+    "photoswipe": "~4.1.1",
+    "turbolinks": "turbolinks/turbolinks"
   }
 }
